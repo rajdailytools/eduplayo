@@ -1,0 +1,966 @@
+PROJECT: EDUPLAYO.FUN — PREMIUM GAMIFIED LEARNING PLATFORM
+
+Act as a senior full-stack developer, UI/UX designer, educational game designer, accessibility specialist, SEO engineer, and software architect.
+
+Build a complete, polished, production-oriented educational gaming website named EduPlayo.
+
+The official domain intended for this project is "eduplayo.fun".
+
+The website will initially focus on NCERT/CBSE-aligned school learning for Classes 1–5, with an architecture that supports expansion to Classes 6–12 and competitive examinations such as SSC, Railway, and other government exams in the future.
+
+Do not build a generic school website, a simple quiz website, or a static landing page. Build a real, interactive learning platform where students understand concepts through games, animations, practice questions, feedback, and rewards.
+
+The project must be suitable for deployment using GitHub and Vercel, with a custom domain connected later.
+
+1. MOST IMPORTANT DEVELOPMENT RULES
+
+1. Build the actual application, not merely a visual mockup.
+2. Implement all primary buttons, navigation links, game interactions, filters, and menus.
+3. Never display fake statistics, fake student counts, fake testimonials, or fabricated achievements.
+4. Do not create buttons that appear functional but do nothing.
+5. Do not use placeholder pages for features described as implemented.
+6. Do not require paid APIs for the core learning experience.
+7. Do not expose API keys, service-role keys, passwords, or secrets in frontend code.
+8. Ensure the application builds successfully before considering the task complete.
+9. Make the interface responsive across mobile phones, tablets, laptops, and desktop computers.
+10. Use original game assets and original educational explanations where possible.
+11. Verify educational content against the relevant official syllabus before describing it as officially aligned.
+12. Do not reproduce entire copyrighted textbooks or third-party game assets without permission.
+13. If a feature needs a backend, clearly implement it or identify the missing backend requirement. Never simulate secure account storage with insecure frontend-only code.
+14. Preserve working features when making changes.
+15. Prefer a stable, maintainable implementation over unnecessary complexity.
+
+If the initial generation is too large, create the project in manageable stages without removing required features. Continue until the build, core interactions, and deployment configuration are complete.
+
+2. BRAND IDENTITY
+
+Brand name: EduPlayo
+
+Intended domain: eduplayo.fun
+
+Primary tagline:
+"Learn It. Play It. Master It."
+
+Secondary message:
+"Turn every lesson into an adventure!"
+
+Brand personality:
+
+- Playful
+- Premium
+- Trustworthy
+- Educational
+- Modern
+- Encouraging
+- Safe for children
+
+Create a distinctive EduPlayo wordmark using text and an original simple logo mark. The mark may combine a graduation cap, a playful spark, and a game controller concept, but it must remain simple and recognizable.
+
+Do not copy another educational platform's logo.
+
+Create a consistent brand design system.
+
+3. PREMIUM COLOUR SYSTEM
+
+Use a consistent colour palette:
+
+Primary indigo: #4338CA
+Secondary purple: #7C3AED
+Bright yellow: #FACC15
+Success green: #10B981
+Sky blue: #38BDF8
+Background: #F8FAFC
+Surface white: #FFFFFF
+Main text: #172554
+Secondary text: #64748B
+Border: #E2E8F0
+Error: #DC2626
+
+Use purple and indigo as the primary brand colours.
+
+Use yellow for rewards, stars, and important highlights.
+
+Use green for correct answers and completed activities.
+
+Use red only for errors and necessary warnings.
+
+Do not fill every section with bright colours. Maintain visual hierarchy, generous whitespace, readable text, and premium presentation.
+
+Use rounded cards, subtle shadows, smooth transitions, tasteful gradients, and clear typography.
+
+Typography:
+
+- Use a clean modern sans-serif font.
+- Use a highly readable font for educational questions.
+- Use consistent heading sizes and spacing.
+- Avoid overly small text on mobile devices.
+
+Animation:
+
+- Gentle card hover effects
+- Smooth page transitions where appropriate
+- Progress bar animations
+- Star and badge celebrations
+- Correct-answer feedback
+- Lightweight confetti for meaningful achievements
+
+Respect reduced-motion accessibility preferences.
+
+Do not use excessive animations that interfere with reading or game performance.
+
+4. RECOMMENDED TECHNOLOGY STACK
+
+Build a modern frontend using:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Lucide React icons
+- A lightweight animation solution where appropriate
+
+Use maintainable, reusable components.
+
+Use Phaser or another game engine only if a specific game genuinely requires it. Simple educational games should preferably use React, HTML, CSS, and JavaScript.
+
+Do not introduce unnecessary heavy libraries.
+
+The project must be compatible with Vercel deployment.
+
+Include:
+
+- package.json
+- package-lock.json if supported by the environment
+- index.html
+- Vite configuration
+- TypeScript configuration
+- Tailwind configuration as required by the chosen version
+- Source code
+- Public assets
+- README.md
+- .gitignore
+- .env.example when environment variables are needed
+- Vercel configuration only when necessary
+
+Do not create conflicting or redundant configurations.
+
+If the AI Studio environment uses a different starter structure, adapt the implementation while preserving these requirements.
+
+5. WEBSITE INFORMATION ARCHITECTURE
+
+Create the following public pages.
+
+1. Home
+2. Explore Classes
+3. Class Details
+4. Subject Details
+5. Chapter Details
+6. Game Player
+7. Practice
+8. Challenges
+9. Revision
+10. Search Results
+11. About Us
+12. Contact Us
+13. Privacy Policy
+14. Terms and Conditions
+15. Disclaimer
+16. Accessibility
+17. 404 Not Found
+
+Create a scalable routing structure.
+
+Suggested routes:
+
+/
+/classes
+/classes/:classId
+/classes/:classId/:subjectId
+/chapters/:chapterId
+/games/:gameId
+/practice/:chapterId
+/challenges
+/revision
+/search
+/about
+/contact
+/privacy-policy
+/terms
+/disclaimer
+/accessibility
+
+Ensure that all routes load correctly after directly opening or refreshing the page on Vercel.
+
+Configure SPA fallback routing appropriately.
+
+Do not create duplicate or conflicting route definitions.
+
+6. PREMIUM HOME PAGE
+
+Create a polished homepage with the following sections.
+
+A. Announcement strip
+
+Display a small announcement area that can be configured from the site's content configuration.
+
+Do not display fake promotions or countdown timers.
+
+B. Header
+
+Include:
+
+- EduPlayo logo
+- Home
+- Explore Classes
+- Subjects
+- Games
+- Challenges
+- Search
+- Language selector
+- Sound preference
+- Mobile navigation menu
+
+On desktop, use a clean navigation bar.
+
+On mobile, use a compact header with an accessible menu.
+
+Do not show nonfunctional login or profile buttons.
+
+If accounts are not configured, omit account-dependent functionality or clearly label it as unavailable.
+
+C. Hero section
+
+Main headline:
+
+"Learning Gets More Fun When You Play!"
+
+Supporting text:
+
+"Explore interactive learning games, practise important concepts, and celebrate every little victory."
+
+Primary button:
+"Start Learning"
+
+Secondary button:
+"Explore Classes"
+
+Create an original visual composition featuring:
+
+- Floating educational shapes
+- Number cards
+- Stars
+- A book illustration
+- A friendly mascot or original character
+- Small game tiles
+
+Use original SVG illustrations or CSS illustrations where possible.
+
+Do not rely on external images that might disappear or require paid licensing.
+
+Ensure the hero section looks premium rather than cluttered.
+
+D. Class selection
+
+Show cards for:
+
+- Class 1
+- Class 2
+- Class 3
+- Class 4
+- Class 5
+
+Mark available content accurately.
+
+For classes with incomplete content, show a clear "Coming Soon" label rather than pretending the class has complete games.
+
+The architecture must support adding Classes 6–12 later.
+
+E. Popular learning games
+
+Display actual playable games from the content catalogue.
+
+Each card should show:
+
+- Game title
+- Class
+- Subject
+- Topic
+- Estimated duration
+- Difficulty
+- Play button
+
+Only show a game as playable if its game implementation exists.
+
+F. Subject exploration
+
+Create subject cards for Maths, English, Hindi, and EVS for the initial primary-school experience.
+
+Include Science and Social Science in the expandable architecture for appropriate classes.
+
+G. Daily challenge
+
+Create a daily challenge component using deterministic or locally configured challenge data.
+
+Display:
+
+- Challenge title
+- Question count
+- Difficulty
+- Start button
+- Completion status where available
+
+Do not require a server for the initial public challenge.
+
+If the challenge is generated locally, make that limitation clear.
+
+H. How EduPlayo works
+
+Display three steps:
+
+1. Choose your class.
+2. Learn through interactive games.
+3. Practise, improve, and earn rewards.
+
+I. Learning benefits
+
+Use honest descriptions:
+
+- Interactive practice
+- Instant feedback
+- Topic-based revision
+- Progress tracking on the current device
+- Learning at your own pace
+
+Do not claim guaranteed academic improvement.
+
+J. Footer
+
+Include:
+
+- Logo and short brand description
+- Navigation
+- Classes
+- Subjects
+- About
+- Contact
+- Privacy Policy
+- Terms
+- Disclaimer
+- Copyright notice
+
+Use:
+"© EduPlayo. All rights reserved."
+
+Do not invent a company name, registered business address, phone number, or email address.
+
+Provide configuration placeholders for contact details and clearly document what must be replaced before launch.
+
+7. CLASS AND SUBJECT SYSTEM
+
+Build the content catalogue using structured data rather than hardcoding every card separately.
+
+Each class should have:
+
+- Class identifier
+- Display name
+- Description
+- Subjects
+- Chapters
+- Games
+- Practice activities
+- Availability status
+
+Each subject should contain:
+
+- Subject name
+- Icon
+- Description
+- Chapters
+- Available activities
+
+Each chapter should contain:
+
+- Chapter title
+- Topic
+- Learning objectives
+- Explanation
+- Examples
+- Games
+- Practice questions
+- Challenge questions
+- Revision summary
+- Completion criteria
+
+Create reusable components for:
+
+- ClassCard
+- SubjectCard
+- ChapterCard
+- GameCard
+- ProgressBar
+- RewardBadge
+- QuestionCard
+- AnswerOption
+- FeedbackPanel
+- GameResult
+- EmptyState
+- LoadingState
+- ErrorState
+
+Ensure content can be expanded by adding data rather than rewriting the application.
+
+8. FIRST WORKING CONTENT RELEASE
+
+Do not try to fill all 12 classes with superficial or fabricated content in the first version.
+
+Focus on a genuinely playable pilot:
+
+Class 1 → Maths → Numbers and Counting
+
+Verify the exact textbook and chapter alignment before claiming a specific NCERT chapter mapping.
+
+If a textbook edition cannot be verified, describe the content as a general Class 1-level learning topic.
+
+Include these learning activities:
+
+Game 1: Count the Objects
+
+Show a group of objects such as apples, stars, or balls.
+
+Ask the learner to count the objects and select the correct number.
+
+Requirements:
+
+- Generate multiple question variations.
+- Use accessible answer buttons.
+- Give immediate feedback.
+- Explain the correct answer.
+- Track the score.
+- Allow the learner to try again.
+- Show a completion summary.
+
+Game 2: Number Matching
+
+Match a number to a group of objects.
+
+Requirements:
+
+- Interactive matching or drag-and-drop.
+- Provide a tap-to-select alternative for touchscreens.
+- Show clear matching feedback.
+- Prevent accidental double scoring.
+- Allow reset.
+
+Game 3: Number Order
+
+Arrange numbers in ascending order.
+
+Requirements:
+
+- Use draggable cards if practical.
+- Provide accessible alternative controls.
+- Check the order.
+- Explain mistakes.
+- Track attempts and score.
+- Provide a replay option.
+
+All three games must be genuinely interactive and playable.
+
+Include additional sample content only when it can be implemented correctly.
+
+9. GAME ENGINE AND INTERACTION REQUIREMENTS
+
+Every game must have a predictable state model.
+
+Possible states:
+
+- Ready
+- Playing
+- Feedback
+- Completed
+
+Implement:
+
+- Start
+- Answer selection
+- Correct/incorrect feedback
+- Next question
+- Score calculation
+- Progress indicator
+- Completion screen
+- Replay
+- Exit confirmation where needed
+
+Prevent:
+
+- Double scoring
+- Duplicate answer submission
+- Advancing without an answer when an answer is required
+- Negative question indices
+- Invalid score states
+
+Correct-answer feedback should be encouraging.
+
+Examples:
+"Great job!"
+"You're getting better!"
+"Let's try that one again!"
+
+Incorrect-answer feedback should be supportive.
+
+Example:
+"Not quite. Let's count together and try again."
+
+Never shame learners or use harsh failure messages.
+
+Use original simple illustrations. Do not depend on copyrighted characters.
+
+Include sound effects only if locally available or generated from simple browser audio. Audio must be optional and off or appropriately controlled by default.
+
+Do not autoplay music.
+
+10. POINTS, LEVELS, AND REWARDS
+
+Implement a basic reward system for the first release.
+
+Features:
+
+- XP points
+- Correct-answer streak within a game
+- Game completion badge
+- Chapter completion indicator
+- Session summary
+- Best score for the current device
+
+Suggested rules:
+
+- Award points only for valid game actions.
+- Avoid repeatedly awarding completion rewards for the same completed session.
+- Keep the scoring rules consistent.
+- Explain how points are earned.
+
+Store non-sensitive progress locally using a versioned localStorage schema.
+
+Handle unavailable or corrupted localStorage gracefully.
+
+Provide a reset-progress option with confirmation.
+
+Do not collect personal information just to award local game points.
+
+Clearly distinguish locally stored progress from cloud-synchronised progress.
+
+Do not pretend local progress automatically transfers between devices.
+
+11. SEARCH, FILTERS, AND DISCOVERY
+
+Implement working search across available content.
+
+Search should support:
+
+- Game titles
+- Subjects
+- Topics
+- Class names
+- Chapter titles
+
+Include useful filters:
+
+- Class
+- Subject
+- Difficulty
+- Activity type
+
+Requirements:
+
+- Case-insensitive search
+- Clear filters button
+- Empty-result state
+- Accessible controls
+- Useful search suggestions where appropriate
+
+Do not show unavailable games in the playable results.
+
+12. HINDI AND ENGLISH SUPPORT
+
+Build the interface so English and Hindi can be supported through a central translation dictionary.
+
+Implement:
+
+- English as the initial default
+- Hindi as an available language option
+- Translation for all major interface labels
+- Clear handling of missing translations
+
+Do not translate English educational content into Hindi by blindly replacing individual words.
+
+Create separate educational text fields for each language where needed.
+
+For content not yet translated, clearly indicate which language is available.
+
+13. MOBILE-FIRST EXPERIENCE
+
+A large portion of the audience may use Android phones.
+
+Prioritise:
+
+- Responsive layout
+- Fast loading
+- Large touch targets
+- Readable questions
+- No horizontal overflow
+- Smooth game interactions
+- Lightweight illustrations
+- Low-bandwidth performance
+
+Test these viewport sizes:
+
+- 360 × 800
+- 390 × 844
+- 768 × 1024
+- 1366 × 768
+
+Ensure drag-and-drop games also work with touchscreens and provide accessible alternatives.
+
+Do not rely on hover-only interactions.
+
+14. ACCESSIBILITY
+
+Implement:
+
+- Semantic HTML
+- Keyboard navigation
+- Visible focus indicators
+- Appropriate contrast
+- Accessible labels
+- Useful alternative text
+- Reduced-motion support
+- Clear error messages
+- Non-colour indicators for correct and incorrect answers
+
+Do not communicate success or failure through colour alone.
+
+Ensure buttons have meaningful accessible names.
+
+15. EDUCATIONAL CONTENT QUALITY
+
+Educational explanations must be age-appropriate and factually correct.
+
+Use:
+
+- Short explanations
+- Familiar examples
+- Simple language
+- Step-by-step learning
+- Practice after explanation
+- Helpful error correction
+- Gradually increasing difficulty
+
+Do not fabricate official syllabus alignment.
+
+Do not reproduce entire NCERT chapters, textbook illustrations, or other copyrighted material without appropriate permission.
+
+Create original questions and illustrations wherever possible.
+
+Add content metadata so the syllabus and textbook edition can be verified later.
+
+16. ACCOUNTS AND BACKEND
+
+The initial version should work without paid APIs or a database.
+
+Implement local progress storage for the first release.
+
+Prepare clean interfaces so a backend can be added later.
+
+Do not implement fake authentication using localStorage.
+
+Do not store passwords or sensitive student information in frontend code.
+
+If account functionality is later added, use a properly configured authentication provider and server-side access controls.
+
+A future Supabase integration may support:
+
+- User profiles
+- Cloud progress
+- Teacher dashboards
+- Parent dashboards
+- Leaderboards
+
+For this first release, do not require Supabase to play games.
+
+Do not expose service-role keys in browser bundles.
+
+17. CHILD PRIVACY AND SAFETY
+
+Design for a child-friendly learning environment.
+
+Requirements:
+
+- Collect the minimum information necessary.
+- Avoid unnecessary personal data collection.
+- Do not include public chat or unrestricted user-generated content.
+- Do not expose a child's progress publicly by default.
+- Do not create public profiles containing personal information.
+- Do not implement invasive tracking.
+- Avoid deceptive buttons and manipulative reward mechanics.
+- Do not place ads where children may mistake them for game controls.
+- Make privacy and contact information easy to find.
+
+Before launch, review applicable child privacy laws, consent requirements, and advertising network policies.
+
+Do not claim legal compliance without verification.
+
+18. SEO AND TECHNICAL STRUCTURE
+
+Implement:
+
+- Unique page titles
+- Relevant meta descriptions
+- Canonical URL support
+- Open Graph metadata
+- Twitter/X card metadata where appropriate
+- robots.txt
+- sitemap.xml
+- Semantic headings
+- Internal links
+- Descriptive URLs
+- Favicon
+- Web app theme colour
+- Useful 404 page
+
+Do not index empty, placeholder, or incomplete content pages as if they contain useful educational material.
+
+Configure canonical URLs using a central site configuration.
+
+Use "https://eduplayo.fun" as the intended production origin, but clearly document that DNS and domain configuration must be completed before the canonical URLs and live sitemap are used in production.
+
+Do not add fake structured data or fabricated ratings.
+
+Keep the site metadata consistent with the real content.
+
+19. PERFORMANCE
+
+Optimise for real mobile devices.
+
+Requirements:
+
+- Avoid unnecessarily large dependencies.
+- Lazy-load suitable non-critical content.
+- Optimise image assets.
+- Avoid layout shifts.
+- Use stable component structures.
+- Minimise unnecessary re-renders.
+- Provide loading and error states.
+- Ensure games remain responsive on modest hardware.
+
+Do not sacrifice functionality merely to achieve a performance score.
+
+20. MONETISATION PREPARATION
+
+Do not automatically inject advertising scripts into the initial release.
+
+Prepare a clean, configurable advertising component that is disabled by default.
+
+Later, the site owner may configure a supported advertising network after checking its policies and approval requirements.
+
+Advertising must never:
+
+- Obscure questions or answer buttons
+- Interrupt a game unexpectedly
+- Encourage accidental clicks
+- Imitate educational controls
+- Expose children to inappropriate content
+
+Do not invent publisher IDs or ad codes.
+
+Do not claim the website is approved by an advertising network.
+
+21. ABOUT, CONTACT, PRIVACY, TERMS, AND DISCLAIMER
+
+Create complete, professional starter pages for:
+
+- About Us
+- Contact Us
+- Privacy Policy
+- Terms and Conditions
+- Disclaimer
+- Accessibility
+
+The pages must be relevant to an educational gaming platform.
+
+Clearly mark contact information and business details that need to be supplied by the site owner.
+
+Do not invent a real address, company registration, support email, or legal status.
+
+The privacy page must explain actual data practices, not fictional practices.
+
+If local progress is stored in the browser, describe that accurately.
+
+If analytics or advertising are added later, update the privacy disclosures accordingly.
+
+Recommend legal review before production launch.
+
+22. DESIGN DETAILS
+
+Use a premium interface with:
+
+- A polished navigation bar
+- A clear hero section
+- Attractive class cards
+- Custom illustrated game cards
+- Rounded panels
+- Consistent spacing
+- Carefully controlled gradients
+- Beautiful empty states
+- Useful hover and focus states
+- Subtle motion
+- Accessible typography
+
+Avoid:
+
+- Excessive neon
+- Constant animation
+- Overcrowded layouts
+- Too many unrelated colours
+- Generic template appearance
+- Broken images
+- Fake testimonials
+- Fake online-user counters
+- Fake ratings
+- Dead links
+- Unfinished buttons
+
+The site should look professionally designed, not like an unmodified template.
+
+23. CODE QUALITY
+
+Use:
+
+- Reusable components
+- TypeScript types for important data structures
+- Centralised content data
+- Clear file organisation
+- Small, understandable modules
+- Sensible error handling
+- Consistent naming
+- Comments for non-obvious logic
+
+Do not put the entire application into one giant component.
+
+Do not use "any" everywhere to bypass TypeScript errors.
+
+Do not suppress errors simply to make the build pass.
+
+Do not use fake API responses for core game functionality.
+
+24. TESTING AND ACCEPTANCE CRITERIA
+
+Before declaring completion, verify the following:
+
+1. The application starts successfully.
+2. The production build succeeds.
+3. The homepage renders correctly.
+4. Navigation links work.
+5. Class selection works.
+6. Search and filters work.
+7. All three initial games can be played.
+8. Correct and incorrect answers produce suitable feedback.
+9. Scores are calculated correctly.
+10. Completion and replay work.
+11. Progress is stored and restored locally where expected.
+12. Reset progress works after confirmation.
+13. Hindi and English interface switching works for translated labels.
+14. Mobile layouts do not overflow horizontally.
+15. Keyboard navigation works for the main interactions.
+16. Missing assets do not break the page.
+17. Refreshing a nested route works on Vercel.
+18. The 404 page works.
+19. No secrets are exposed.
+20. No primary button is left nonfunctional.
+21. No fake student statistics are displayed.
+22. SEO metadata is generated correctly.
+23. Incomplete classes are labelled honestly.
+24. The README explains how to run and deploy the application.
+
+If automated testing tools are available, add meaningful tests for game scoring, question progression, and reward logic.
+
+Fix errors found during testing.
+
+Do not claim that a test passed unless it was actually run.
+
+25. GITHUB AND VERCEL DEPLOYMENT
+
+Prepare the project for the following workflow:
+
+1. Generate the complete source code.
+2. Install dependencies.
+3. Run the development server.
+4. Run the production build.
+5. Fix all build errors.
+6. Explain how to download or export the project.
+7. Explain how to upload the source code to a GitHub repository.
+8. Explain how to import the GitHub repository into Vercel.
+9. Configure the framework preset and build settings if required.
+10. Deploy the application.
+11. Explain how to connect the purchased "eduplayo.fun" domain in Vercel.
+12. Explain how to configure DNS records using the exact values shown in the Vercel dashboard.
+13. Explain how to verify HTTPS and the deployed site.
+14. Explain how to update the website after pushing new code to GitHub.
+
+Do not invent DNS record values. Use the actual values provided by Vercel during domain setup.
+
+Do not assume the domain has already been purchased or connected.
+
+The initial application must not depend on paid hosting.
+
+26. README REQUIREMENTS
+
+Write a beginner-friendly README containing:
+
+- Project overview
+- Features
+- Technology stack
+- Project folder structure
+- Installation steps
+- Local development instructions
+- Production build command
+- GitHub upload instructions
+- Vercel deployment instructions
+- Domain connection instructions
+- Environment variable guidance
+- How to add a new class
+- How to add a subject
+- How to add a chapter
+- How to create a new game
+- How to update translations
+- Known limitations
+- Pre-launch checklist
+
+Assume the site owner is learning web development and needs clear, step-by-step instructions.
+
+27. FINAL DELIVERY
+
+Deliver a working project, not just a plan.
+
+First, create the complete application structure and implement the core features.
+
+Then:
+
+- Run the available build checks.
+- Resolve compilation errors.
+- Test the core games.
+- Review the responsive layouts.
+- Verify the routes and navigation.
+- Check for nonfunctional buttons.
+- Review accessibility.
+- Review security and privacy risks.
+- Complete the README.
+- Summarise what is implemented and what still requires manual configuration.
+
+Do not stop after generating the homepage.
+
+Do not replace the requested website with a screenshot or static design.
+
+Do not claim to have deployed the website, purchased the domain, created a GitHub repository, or connected DNS unless those actions have actually been completed.
+
+Start building EduPlayo now.

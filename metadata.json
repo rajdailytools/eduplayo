@@ -1,0 +1,6 @@
+{
+  "name": "EduPlayo",
+  "description": "Premium gamified learning platform for school students featuring NCERT-aligned interactive games, practice, and challenges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
